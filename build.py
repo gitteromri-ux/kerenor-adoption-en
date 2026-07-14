@@ -276,21 +276,116 @@ section { padding: 70px 0; }
   color: var(--orange); margin: 12px 0 18px;
 }
 .pkg-price small { font-size: 0.9rem; color: var(--muted); font-weight: 500; font-style: italic; display: block; margin-top: 4px; }
+/* Neon glowing CTA */
+@keyframes pkgGlowTeal {
+  0%,100% {
+    box-shadow:
+      0 0 0 0 rgba(6,162,207,0.55),
+      0 0 22px 4px rgba(6,162,207,0.55),
+      0 10px 26px rgba(4,81,132,0.35);
+  }
+  50% {
+    box-shadow:
+      0 0 0 8px rgba(6,162,207,0.0),
+      0 0 40px 12px rgba(6,162,207,0.85),
+      0 14px 32px rgba(4,81,132,0.5);
+  }
+}
+@keyframes pkgGlowOrange {
+  0%,100% {
+    box-shadow:
+      0 0 0 0 rgba(245,166,35,0.55),
+      0 0 24px 5px rgba(245,166,35,0.65),
+      0 10px 26px rgba(197,110,10,0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 8px rgba(245,166,35,0.0),
+      0 0 44px 14px rgba(245,166,35,0.9),
+      0 14px 34px rgba(197,110,10,0.55);
+  }
+}
+@keyframes pkgShimmer {
+  0%   { transform: translateX(-130%) skewX(-22deg); }
+  100% { transform: translateX(230%)  skewX(-22deg); }
+}
 .pkg-cta {
+  position: relative; overflow: hidden;
   display: block; width: 100%; text-align: center;
-  padding: 14px; font-size: 1rem; font-weight: 800;
-  border: 2px solid var(--teal); border-radius: 30px;
-  color: var(--teal) !important; background: #fff;
-  transition: all .25s;
+  padding: 18px 20px; font-size: 1.08rem; font-weight: 900;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  border: 0; border-radius: 999px;
+  color: #fff !important;
+  background: linear-gradient(135deg, #08c1f0 0%, var(--teal) 45%, var(--navy) 100%);
+  transition: transform .25s ease, filter .25s ease;
+  animation: pkgGlowTeal 2.4s ease-in-out infinite;
+  text-decoration: none;
+  margin-top: 6px;
 }
-.pkg-cta:hover { background: var(--teal); color: #fff !important; }
-.pkg.vip .pkg-cta { border-color: var(--orange); color: var(--orange) !important; }
-.pkg.vip .pkg-cta:hover { background: var(--orange); color: #fff !important; }
-.pkg-vip-bonuses {
-  display: flex; gap: 12px; margin-top: 14px; justify-content: center;
-  flex-wrap: wrap;
+.pkg-cta::before {
+  content: ""; position: absolute; inset: 0;
+  border-radius: inherit; padding: 2px;
+  background: linear-gradient(135deg, #7ee8ff 0%, #fff 50%, #7ee8ff 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0.65; pointer-events: none;
 }
-.pkg-vip-bonuses img { width: 68px; height: 68px; object-fit: contain; }
+.pkg-cta::after {
+  content: ""; position: absolute; top: 0; bottom: 0;
+  left: 0; width: 55%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+  transform: translateX(-130%) skewX(-22deg);
+  animation: pkgShimmer 3.2s ease-in-out infinite;
+  animation-delay: 0.4s;
+  pointer-events: none;
+}
+.pkg-cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.08);
+  color: #fff !important;
+}
+.pkg.vip .pkg-cta {
+  background: linear-gradient(135deg, #ffd86b 0%, var(--orange) 50%, #d67d0a 100%);
+  animation: pkgGlowOrange 2.4s ease-in-out infinite;
+}
+.pkg.vip .pkg-cta::before {
+  background: linear-gradient(135deg, #fff2b8 0%, #fff 50%, #fff2b8 100%);
+}
+
+/* Bonuses (VIP) */
+.pkg-bonuses-title {
+  margin: 14px 0 10px; font-weight: 800;
+  color: var(--orange); font-size: 1rem; text-align: center;
+}
+.pkg-bonuses-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px;
+  margin-bottom: 12px;
+}
+.pkg-bonus-item {
+  display: flex; align-items: center; gap: 10px;
+  background: #FFF8E8; border: 1px solid #F5D98A;
+  border-radius: 10px; padding: 10px 12px;
+  font-size: 0.9rem; color: var(--navy); font-weight: 600;
+  line-height: 1.35;
+}
+.pkg-bonus-icon { font-size: 1.4rem; flex-shrink: 0; }
+.pkg-bonus-label { flex: 1; }
+.pkg-badges {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  margin: 8px 0 14px;
+}
+.pkg-badge {
+  padding: 10px 14px; border-radius: 50%;
+  width: 92px; height: 92px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; color: #fff; font-weight: 800;
+  font-size: 0.72rem; line-height: 1.15;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: rotate(-6deg);
+  background: radial-gradient(circle at 30% 30%, #22c3ee, var(--teal-dark));
+}
+.pkg-badge-red { background: radial-gradient(circle at 30% 30%, #ff5d5d, #c72020); transform: rotate(6deg); }
+.pkg-vip-bonuses { display: none; }
 @media (max-width: 780px) { .packages-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Residents grid (cards ~25% larger) ---------- */
@@ -687,21 +782,35 @@ def render_home():
     for p in PAGE["packages"]:
         vip_class = " vip" if p["key"] == "vip" else ""
         includes = "".join(f"<li>{item}</li>" for item in p["includes"])
-        footnote = f'<p class="pkg-footnote">{p["footnote"]}</p>' if p["footnote"] else ""
-        vip_bonus = ""
-        if p["key"] == "vip":
-            vip_bonus = """<div class="pkg-vip-bonuses">
-              <img src="images/vip-crown.png" alt="VIP" title="VIP crown">
-              <img src="images/vip-block.png" alt="Block photo of your adopted animal" title="Block photo">
-            </div>"""
+        footnote = f'<p class="pkg-footnote">{p["footnote"]}</p>' if p.get("footnote") else ""
+        period = p.get("period", "per month")
+
+        # Bonuses block (VIP)
+        bonus_block = ""
+        if p.get("bonuses"):
+            bonus_items = "".join(
+                f'<div class="pkg-bonus-item"><span class="pkg-bonus-icon">{b["icon"]}</span><span class="pkg-bonus-label">{b["label"]}</span></div>'
+                for b in p["bonuses"]
+            )
+            bonus_title = p.get("bonus_title", "** Plus you'll also receive:")
+            badges_html = ""
+            if p.get("badges"):
+                badges_html = '<div class="pkg-badges">' + "".join(
+                    f'<div class="pkg-badge pkg-badge-{b["color"]}">{b["text"]}</div>'
+                    for b in p["badges"]
+                ) + "</div>"
+            bonus_block = f"""<div class="pkg-bonuses-title">{bonus_title}</div>
+            <div class="pkg-bonuses-grid">{bonus_items}</div>
+            {badges_html}"""
+
         packages_html += f"""<div class="pkg{vip_class} reveal">
           <div class="pkg-header">{p['name']}</div>
           <div class="pkg-body">
             <div class="pkg-includes-title">What's included:</div>
             <ul class="pkg-list">{includes}</ul>
+            {bonus_block}
+            <div class="pkg-price">Donation: {p['price']}<small>{period}</small></div>
             {footnote}
-            {vip_bonus}
-            <div class="pkg-price">Donation: {p['price']}<small>one-time</small></div>
             <a href="{p['url']}" target="_blank" rel="noopener" class="pkg-cta">{p['cta']}</a>
           </div>
         </div>"""
