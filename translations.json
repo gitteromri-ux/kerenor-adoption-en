@@ -1,0 +1,220 @@
+{
+  "page": {
+    "hero_kicker": "Virtual Adoption",
+    "hero_title": "Have you always dreamed of raising a dog, a cat, a goat, a donkey — or perhaps even a pig?",
+    "hero_subtitle": "This is your chance to adopt a resident at the farm — a virtual adoption that gives an animal in need a lifetime of safety, care, and love.",
+    "section_title": "Meet Our Residents",
+    "section_subtitle": "Every animal here has a story. Choose one to sponsor, and follow their journey.",
+    "how_it_works_title": "How It Works",
+    "how_it_works": [
+      {"step": "1", "title": "Choose your package", "text": "Pick the adoption tier that feels right for you."},
+      {"step": "2", "title": "Choose your resident", "text": "Select the animal you'd like to sponsor from our family."},
+      {"step": "3", "title": "Receive your certificate", "text": "You'll get a personal adoption certificate — plus a few surprises."}
+    ],
+    "packages_title": "Adoption Packages",
+    "packages": [
+      {"name": "Basic Package", "price": "₪30", "url": "https://secure.cardcom.solutions/EA/EA5/oSs4V75jIEerAce8Ncw8Hg/Intro"},
+      {"name": "Extended Package", "price": "₪60", "url": "https://secure.cardcom.solutions/EA/EA5/9LZWPxhe5EOLYwt3wW4bg/Intro"},
+      {"name": "Premium Package", "price": "₪90", "url": "https://secure.cardcom.solutions/EA/EA5/y017NAksF0qNfdMsjKSQrQ/Intro"},
+      {"name": "VIP Package", "price": "₪199", "url": "https://secure.cardcom.solutions/EA/EA5/VxpFdRWx4kuJ7mO8rdbHOQ/Intro"}
+    ],
+    "tax_note_title": "Tax-Deductible Donation",
+    "tax_note": "Keren Or is a registered nonprofit and has received Section 46 approval under the Israeli Income Tax Ordinance. Donations to the association qualify for a tax credit of up to 30% of your taxable income.",
+    "contact_title": "Get in Touch",
+    "contact_name": "Keren Or Farm — Beit Berl",
+    "contact_email": "info@kerenorfarm.com",
+    "contact_whatsapp": "054-903-3445",
+    "cta_sponsor": "Sponsor this resident",
+    "cta_read_more": "Read full story",
+    "back_to_all": "← Back to all residents",
+    "footer_tagline": "A safe home for animals rescued from neglect, abuse, and industry.",
+    "meet_label": "Meet"
+  },
+  "species": {
+    "עייר (חמור)": "Donkey",
+    "עיירה (חמורה)": "Donkey (female)",
+    "חמור": "Donkey",
+    "כלבה": "Dog (female)",
+    "כלב": "Dog",
+    "חזיר": "Pig",
+    "חזירות": "Pigs",
+    "גדי": "Kid goat",
+    "גדייה": "Kid goat (female)",
+    "עז": "Goat",
+    "חתולים": "Cats",
+    "כבשה": "Sheep",
+    "פרה": "Cow",
+    "סוסה": "Horse (mare)",
+    "סייח (סוס)": "Foal",
+    "עגלה": "Calf (female)",
+    "עגל": "Calf",
+    "עגלים": "Calves"
+  },
+  "animals": {
+    "אביב": {
+      "name": "Aviv",
+      "tagline": "Aviv, the little donkey, was found in the Jerusalem area with wounds and severe infections in his legs — standing on three legs, miserable and in agony.",
+      "bio": "Aviv, our little donkey, was found in the Jerusalem area with terrible wounds and infections in his legs. He was standing on three legs, wretched and racked with pain. By the time he reached us, his leg was bleeding non-stop and there was no choice but to amputate it. He underwent surgery at Beit Dagan. It isn't easy for a donkey to live on three legs, but Aviv is strong — and we are just as stubborn. With the right rehabilitation, a great deal of faith and even more love, we believe Aviv will grow into a healthy, powerful donkey."
+    },
+    "אלפא": {
+      "name": "Alpha",
+      "tagline": "Alpha is desperate for a home — and we're asking: help us help her. She came to the farm after living through a nightmare no dog should ever endure.",
+      "bio": "Alpha is desperate for a home, and we are asking: please help us help her. She arrived at the farm after surviving a nightmare no animal should ever face. She was brought to the veterinary clinic after being poisoned, convulsing for hours on end. The violent seizures caused brain damage that left her completely bedridden. Long weeks of intensive hospitalization, devoted care and the delicate work of a team of vets and caregivers slowly brought her back to life. She fought for every breath, every movement, every small step back into the familiar world."
+    },
+    "בייב ובובה": {
+      "name": "Babe & Boba",
+      "tagline": "Babe, our sweet pig, came from the meat industry. He was bought for a petting zoo, and when he grew up he was no longer an attraction — and no one wanted him anymore.",
+      "bio": "Babe, our sweet pig, came from the meat industry. He was bought for a petting corner, and when he grew up he was no longer an attraction and no one wanted him anymore. Many people don't know this, but there are a handful of farms in Israel that raise pigs for meat. The pigs are kept in tiny, filthy pens with no room to move — crammed together in their own waste, fed and fattened until they are led to slaughter. Our Babe was one of the lucky ones. In December 2017, our Babe celebrated eight months at the farm."
+    },
+    "הרצל": {
+      "name": "Herzl",
+      "tagline": "Herzl, our wonderful kid goat, arrived at the farm — and this is his story.",
+      "bio": "Hi everyone. I'm Herzl the kid goat. I came to Keren Or Farm when I was two weeks old, after a rough start in life. I was born with a disability that makes it hard for me to walk like all my friends in the pen. I know I'm a little different, but Keren Or taught me that every animal deserves a chance at a good life — one full of love and cuddles. My mother abandoned me. They say she didn't want me because in the wild I wouldn't have been able to survive on my own. I was so terribly sad — but how lucky I am to have come to live at the farm."
+    },
+    "חתולי החווה": {
+      "name": "The Farm Cats",
+      "tagline": "One day the news reported that Ministry of Agriculture officials and the Tzfat municipality had removed many cats from a resident's apartment. The cats were in horrific condition.",
+      "bio": "One day the news reported that officials from the Ministry of Agriculture and the Tzfat municipality had removed many cats from a resident's apartment. The cats were in a horrifying state — sick, wounded and severely neglected. The Ministry of Agriculture described it as an extreme case known to the welfare authorities. The apartment in Tzfat was overwhelmed by a terrible smell. The cats lived in filth and suffered from skin fungus. The apartment's owner had once sold cats but over time lost control of the growing population — the animals were not vaccinated, spayed or neutered."
+    },
+    "יעל": {
+      "name": "Yael",
+      "tagline": "Meet our Yael. She was born in a dairy pen alongside many brothers and sisters. After a few days she began to limp, and no one knew why.",
+      "bio": "Meet our Yael. She was born in a dairy pen alongside many brothers and sisters. After a few days she began to limp, and no one knew what had happened — nor was it profitable to invest in tests or treatment. Yael arrived at Keren Or Farm with open wounds and a non-functioning hind leg. After being seen by five different vets, the decision was made to amputate the leg so she could live a full, healthy life. Today Yael is growing and recovering. From a young lamb, she is slowly becoming a strong, healthy ewe."
+    },
+    "ליאור": {
+      "name": "Lior",
+      "tagline": "Meet Lior, who came to us from the Be'er Sheva area. Volunteers found her in a sewage stream under a bridge in freezing Be'er Sheva — a young cow limping, her hind leg apparently broken.",
+      "bio": "Meet Lior, who came to us from the Be'er Sheva area. Volunteers found her in a sewage stream under a bridge in freezing Be'er Sheva — a young cow, limping and hobbling, her hind leg appearing to be broken. She was trembling and frightened, drained of energy and motivation, and wouldn't let anyone come near. It turned out she belonged to local Bedouins — she had gone out with them for a morning walk, slipped, injured herself and was left behind, and the herd's owner had no intention of coming back for her. Fortunately, we received permission to bring her to safety. After a 17-hour rescue operation, she finally made it to the farm."
+    },
+    "מיני": {
+      "name": "Mini",
+      "tagline": "Meet our little Mini. She belonged to an elderly, visually impaired woman in Be'er Sheva. When her sons came to visit, they would take Mini out — the rest of the time she stayed in the yard.",
+      "bio": "Meet our little Mini. She was the dog of an elderly, visually impaired woman in Be'er Sheva. When her sons came to visit, they would take Mini out; the rest of the time she stayed in the yard. One day Mini went out on her own, was apparently hit by a car, and came home hobbling on her two front legs. The woman didn't notice the difference, but when one of her sons came to visit, he saw that Mini didn't run to him — she was clearly in pain and could only drag herself from side to side using her two front legs. He contacted us immediately, saying she needed help."
+    },
+    "סטיבן": {
+      "name": "Steven",
+      "tagline": "Steven is an extraordinarily sweet puppy — strong beyond his size — who was found on the street with his mother and siblings. Due to a shattered vertebra in his back, he suffers from full paralysis in his hind legs.",
+      "bio": "Steven is an extraordinarily sweet puppy, strong beyond his size, who was found on the street with his mother and siblings. Due to a shattered vertebra in his spine, he suffers from complete paralysis in his hind legs. But when you look at him, the paralysis is the last thing you notice. His eyes hold an enormous spark of joy, love and a wild passion for life and play. Over the past months, Steven has undergone intensive rehabilitation, hydrotherapy and a range of treatments — he even zips around in a specially fitted wheelchair. But the reality is still complex and there's plenty of work still ahead: every time he gets off his cart, there's more to do."
+    },
+    "פני": {
+      "name": "Penny",
+      "tagline": "Meet our small, beloved Penny — a tiny puppy who just wants warmth and love. Penny was found dragging herself from place to place using only her two front legs.",
+      "bio": "Meet our small, beloved Penny — a tiny puppy who just wants warmth and love. Penny was found by kind people while she was dragging herself from place to place using only her two front legs. It turned out that some children had beaten her so many times, and so brutally, that they broke her spine. Not yet four months old, and already her whole world had collapsed — she will be disabled for life. Our dear Tal Talmon sent us her story, and through her we met Shira, who rescued Penny and became a warm, loving, incredible foster mom for her."
+    },
+    "שחר": {
+      "name": "Shachar",
+      "tagline": "Little Shachar was miraculously saved from abusive hands. A horseshoe had been torn from one of her legs, leaving her with a very serious wound and unable to bear weight on it.",
+      "bio": "Little Shachar was miraculously saved from abusive hands. A horseshoe torn from one of her legs left her with a very serious wound and unable to put any weight on it. Kind-hearted kibbutz members found her injured, hid her in a room where she would be protected, and immediately called for help. We launched an urgent fundraising effort and searched for transport for the poor little baby. It wasn't easy, but we were determined to find a way to bring her to us for treatment. She was rushed to Beit Dagan because of the severity of the leg injury. Bleeding and in pain, we didn't know if she could be saved."
+    },
+    "אלי": {
+      "name": "Eli",
+      "tagline": "Our Eli was born with orthopedic problems. He struggled to stand on his own — and certainly couldn't walk.",
+      "bio": "Our Eli was born with orthopedic problems. He struggled to stand on his own, and certainly couldn't walk. After consultations with leading specialists, Eli was fitted with custom splints to help him use his little legs. With persistent physiotherapy, a great deal of perseverance, a specially adapted surface to stand on, and endless love and encouragement, our Eli can now stand and is learning to walk. There's still a long road ahead — but our brave Eli is determined to be like any other kid goat: to walk, to run and to play under his own power."
+    },
+    "אנג'לה": {
+      "name": "Angela",
+      "tagline": "Meet our Angela. She was found in Be'er Sheva after being abused — wounded, and with graffiti drawn on her body.",
+      "bio": "Meet our Angela. She was found in Be'er Sheva after being abused — wounded, with graffiti drawn on her body. She arrived at the farm thanks to kind people who watched over her and brought her to us on the eve of Shavuot. From the moment she arrived, she has simply followed the volunteers everywhere, always seeking human affection."
+    },
+    "דולי": {
+      "name": "Dolly",
+      "tagline": "Meet our Dolly. She was born into a farm with too many females, and a kind woman from a northern kibbutz didn't want her to end up somewhere bad — so she took her home.",
+      "bio": "Meet our Dolly. She was born into a farm with too many females, and a kind woman from a northern kibbutz didn't want her to end up in a bad place, so she took her home. After living with dogs, Dolly came to the farm and bonded with Loki and Penny — our disabled dogs. When Ofri the calf arrived, we introduced them so Dolly could teach Ofri to eat hay — and they have been inseparable ever since."
+    },
+    "ונוס": {
+      "name": "Venus",
+      "tagline": "At 29 years old, after a life of work and giving, Venus came to us to begin her most peaceful, free and pampered chapter yet.",
+      "bio": "At 29 years old, after a life of work and giving, Venus came to us to begin her most peaceful, free and pampered chapter yet. She arrived from a therapeutic-riding farm that had recently closed under difficult circumstances. After years spent as a riding horse, giving of herself for others, it was finally time for her to rest. From the moment she set foot on our land, her only job has been to simply be herself. She's here to enjoy her freedom, wander in the pasture, eat good food and receive all the love in the world. Venus is a noble, gentle horse with a huge heart."
+    },
+    "יוסי": {
+      "name": "Yossi",
+      "tagline": "Meet our Yossi. He was born on a dairy farm — where there's nothing to do with the male kids, and their fate is usually a bitter one within the industry.",
+      "bio": "Meet our Yossi. He was born on a dairy farm — where there's no use for male kids, and their fate is usually a bitter one within the industry. A kind grandfather bought him as a Passover gift for his grandchildren, but once the holiday ended they had no idea what to do with the kid, or who would look after him. An animal isn't a toy you can set aside or throw away when you get bored. A kid goat only a few days old needs care and bottle feeding every three hours, so the grandfather turned to the farm and asked us to take the little one in and care for him. Of course, we couldn't refuse — and that's how Yossi joined the family."
+    },
+    "לואי": {
+      "name": "Louie",
+      "tagline": "Meet our Louie — a tiny, gorgeous little dog in a wheelchair.",
+      "bio": "Meet our Louie — a tiny, gorgeous little dog in a wheelchair. He was attacked by pit bulls and suffered injuries to his hind legs, but with his wheelchair he gets everywhere. His previous owners could no longer care for him, so he came to the farm and joined our community of disabled dogs. He gets along wonderfully with the other dogs in the enclosure, and is always thrilled to meet new people and old friends alike."
+    },
+    "מאפין": {
+      "name": "Muffin",
+      "tagline": "Meet Muffin — a small, sweet Shih Tzu puppy with a brave heart that never stops choosing hope.",
+      "bio": "Muffin — a big heart in a small body. Muffin is a sweet four-year-old Shih Tzu with a brave heart that never stops choosing hope. The past year shook him to his core. A large dog attacked him — he underwent three surgeries and lost his right eye. Then a herniated disc left him without sensation in his hind legs. Back surgery didn't succeed, and since then Muffin no longer walks. His life changed in an instant: no running, no playing, no walking under his own power. But Muffin is still here — with endless sweetness and a heart that refuses to give up."
+    },
+    "נילה": {
+      "name": "Nila",
+      "tagline": "Nila (female) was diagnosed with a congenital defect at two months old that prevented her from moving her hind legs. Her owners, without a second thought, threw her into the street.",
+      "bio": "Nila (female) was diagnosed with a congenital defect at two months old that prevented her from moving her hind legs. Her owners, without a second thought, threw her into the street. Neighbors fell in love with her and decided to do everything they could to rehabilitate her. They gave her a warm home, showered her with endless love and care, and took her through every possible treatment and test with the best vets in the country. After complex surgery — intended to reduce her pain and enable her to get around with a wheelchair — she began a difficult rehabilitation period. In the end, Nila found her way to us."
+    },
+    "עפרי": {
+      "name": "Ofri",
+      "tagline": "Meet our small, beloved Ofri — a tiny calf born prematurely on a dairy farm.",
+      "bio": "Meet our small, beloved Ofri — a tiny calf born prematurely on a dairy farm. She came to the farm for close, ongoing care and bottle feeding every few hours. After several days she began eating hay on her own and bonded with Dolly the sheep — and the two have been inseparable ever since. Welcome to the family, little one."
+    },
+    "צביקה": {
+      "name": "Tzvika",
+      "tagline": "Tzvika arrived with Malka — a pair of innocent baby donkeys who had already endured neglect and deprivation in their short lives.",
+      "bio": "Tzvika arrived with Malka — a pair of innocent baby donkeys who had already endured neglect and deprivation in their short lives. They were rescued with great difficulty from their abusive owner. When they arrived at the farm, we discovered that Malka's condition was complicated and severe. She received special food and all the love we could give her, around the clock, but after several months of fighting for her life, our Malka collapsed and passed away. Tzvika, her brother — who had watched over his little sister constantly, circling her to make sure she was okay — was left alone. Today, he is part of a large, loving family here at the farm."
+    },
+    "שרה": {
+      "name": "Sarah",
+      "tagline": "Many people don't yet know Sarah's story — and she's so sweet that you simply have to.",
+      "bio": "Many people don't yet know Sarah's story — and she's so sweet that you simply have to. As the holiday eve approached, so did that painful annual phenomenon: the purchase of goats and sheep for home slaughter. Amid this harsh reality, in a pen somewhere, lived a sweet goat named Sarah and her close companion Aviv. Both were especially loved by the pen's owner, and so he reached out to us to take them in. They were meant to be sacrificed for Rosh Hashanah, but thanks to kind people and the donations we raised, we managed to rescue them and give them a new life at the farm."
+    },
+    "אלימן": {
+      "name": "Aliman",
+      "tagline": "Can someone explain to me how? How is it even possible to abandon a creature so beautiful and powerful? A tiny baby, thrown into a field at the peak of the summer heat?",
+      "bio": "Can someone explain to me how? How is it even possible to abandon a creature so beautiful and powerful — a tiny baby, thrown into a field at the peak of the summer heat? The stories never stop coming, and neither do the pleas for help. We want so badly to help everyone — but we can't do it alone; we already have so many to care for. This sweet foal was abandoned in a field several days ago, somehow surviving the extreme heat. We don't know the state of his health. Right now he's with someone who isn't able to care for him, and he urgently needs to be moved. Please help us bring him home."
+    },
+    "אפי וליהי": {
+      "name": "Efi & Lihi",
+      "tagline": "Welcome home, sweet ones. After the hell you've been through, we promise you'll be safe and protected here.",
+      "bio": "The sweet calves from the Gaza-border communities have arrived — and we've already fallen head over heels for them. Beloved ones, welcome to your new home. After the hell you've endured, we promise you will be safe and protected here — we will care for you for the rest of your lives. Here you will live free, happy lives, full of love. They're already running and playing all over the farm, hopping around joyfully, grazing on grass with delight, and slowly meeting all their new friends. We chose to name them after two of our devoted volunteers, whom we love so dearly."
+    },
+    "דידי": {
+      "name": "Didi",
+      "tagline": "On last Valentine's Day, a small sweet surprise was born at the farm: Didi — a playful, curious kid goat, full of life.",
+      "bio": "Meet Didi — a playful, curious kid goat full of life, born on Valentine's Eve. Since then she's been racing around the farm alongside her mother Tamari, melting every heart she meets. A sharp-eyed volunteer noticed that her mother was showing signs of distress and called our incredible medical team, who did sacred work in helping the little one arrive safely. Since then, her mother has been caring for her devotedly, and we're doing everything we can to give her a good start with lots of love and care. But to make sure she has everything she needs, we need your help. Every donation — no matter the size — makes a real difference."
+    },
+    "חן": {
+      "name": "Chen",
+      "tagline": "In early May 2023 we received a call from a woman who said a paralyzed kid goat had been found in a field. What followed is a fascinating story about a little goat.",
+      "bio": "In early May 2023 we received a call from a woman who said a paralyzed kid goat had been found in a field. She told us she was providing food and cleaning her, and asked us to take her in. After we approved, she brought her to us. The next day someone called and said he had heard we'd brought in a disabled kid goat and was inquiring about her — which was odd, because we hadn't posted anything about her. As the call went on, his tone grew more and more suspicious. Once the call ended, Keren Or called the woman who had brought her, trying to understand what was going on. The woman apologized for not telling the truth — she had thought that otherwise we wouldn't accept the kid."
+    },
+    "יוקו, מיקי ודנדי": {
+      "name": "Yoko, Miki & Dandy",
+      "tagline": "Meet Dandy, Yoko and Miki. They were rescued at three months old from Kibbutz Lahav, where they were born and were destined for slaughter at six months.",
+      "bio": "Meet our Dandy, Yoko and Miki. They were rescued at three months old from Kibbutz Lahav, where they were born and were meant to be slaughtered at six months of age. They were saved as part of a Meat The Victims action that took place at the site, exposing the terrible truth behind Israel's pork industry. At Kibbutz Lahav, about 20,000 pigs are slaughtered every year. Dandy, Miki and Yoko were saved by a miracle — they will live free, happy lives, and will never again be turned into food or a body to be experimented on."
+    },
+    "לוקמן (לוקי)": {
+      "name": "Lukman (Loki)",
+      "tagline": "Loki (Lukman) was found on the shoulder of a highway — a small, battered, wretched puppy who had apparently been hit by a car, after hours of trying to drag himself to safety.",
+      "bio": "Loki (Lukman) was found on the shoulder of a highway — a small, battered puppy who had apparently been hit by a car, after hours of trying to drag himself to safety on his two front legs. Thousands — if not tens of thousands — of people drove past him and kept going. Only one person didn't stay indifferent. After two days of hospitalization, sweet Lukman (named for the wonderful young man who stopped to help him — we are endlessly grateful) arrived at the farm and has been receiving all the love and support he needs ever since."
+    },
+    "מומו": {
+      "name": "Momo",
+      "tagline": "Meet Momo, our cow. She was found running frightened along a road.",
+      "bio": "Meet Momo, our cow. She was found running frightened along a road when she was only a day or two old. A couple traveling in the area saw her and were afraid she would be hit by a car. They managed to catch her. Feeling sorry for her — she had probably belonged to a herd somewhere nearby — they decided to save her. They brought her to Beit Netanel, where she was nursed and raised, and later they brought her to us at the farm."
+    },
+    "נס": {
+      "name": "Nes",
+      "tagline": "Three months ago, a true miracle happened — a tiny, extraordinary calf was born 47 days premature, in critical condition and with no chance of survival.",
+      "bio": "Three months ago, a true miracle happened — a tiny, extraordinary calf was born 47 days premature, in critical condition and with no chance of survival. But Nes (whose name means 'miracle'), a determined little fighter, managed to astonish us all. Today he's three months old, healthy, and full of joy and love for people. After everything he's been through, Nes still needed one more miracle — to be saved from a bitter fate and given a future in freedom, here at Keren Or Farm. So he can grow up alongside others of his kind and other animals, in a home full of warmth and love, and receive all the devoted care he deserves."
+    },
+    "פיקה": {
+      "name": "Pika",
+      "tagline": "Pika's rescue was one of the hardest we've ever done. We drove to the lowest point on earth during a brutal heatwave and found Pika tied up under the sun with no water, grass or shade.",
+      "bio": "Pika's rescue was one of the hardest we have ever undertaken. We drove to the lowest point on earth (literally) during a brutal heatwave and found Pika tied up under the blazing sun, alone, without a drop of water, without grass, without shade. Beside him sat the sister who had been looking after him, along with her daughter — both exhausted by the extreme heat, but still trying to give Pika their last few drops of water. Pika was drained, but also very friendly. We tried to load him into the trailer, but he resisted. He was so afraid — no one had paid him any attention for so long that he had forgotten how to communicate with humans."
+    },
+    "שהם": {
+      "name": "Shoham",
+      "tagline": "Shoham \"landed at the farm\" — she was left by the gate.",
+      "bio": "Shoham \"landed at the farm\" — she was left by our gate. A week later, after some investigation, we understood that she had fallen from a truck on its way to slaughter. An activist who happened to be on her way to an event picked her up — she jumped out of the car in her formal clothes, ran into the bushes, lifted Shoham into the car, and brought her to the farm."
+    },
+    "תמי": {
+      "name": "Tami",
+      "tagline": "Meet our Tami. Tami belonged to egg smugglers.",
+      "bio": "Meet our Tami. Tami belonged to egg smugglers — they used to smuggle goats through the West Bank into Israel. Two young boys would walk her around, cracking a whip and beating her. Eventually, security guards from Oranit saw them hitting her, took her away from them, and kept her safe until we could come to bring her to us."
+    }
+  }
+}
