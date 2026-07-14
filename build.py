@@ -374,63 +374,111 @@ section { padding: 70px 0; }
 @media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; } }
 
 /* ---------- Individual animal page ---------- */
-.animal-page-hero {
-  background: var(--teal-light);
-  padding: 24px 24px;
+.container.narrow { max-width: 820px; }
+
+.animal-hero {
+  background: #fff;
+  padding: 40px 24px 20px;
+  text-align: center;
   border-bottom: 1px solid var(--line);
 }
-.back-link {
-  color: var(--navy); font-weight: 700; font-size: 0.95rem;
-  display: inline-flex; align-items: center; gap: 6px;
-}
-.back-link:hover { color: var(--teal); }
-
-.profile {
-  max-width: 1100px; margin: 0 auto;
-  padding: 50px 24px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
-  align-items: start;
-}
-.profile-photo {
-  border-radius: 14px; overflow: hidden;
-  box-shadow: var(--card-shadow-hover);
-  aspect-ratio: 4/5; background: var(--teal-light);
-  position: sticky; top: 100px;
-}
-.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
-.profile-content { padding-top: 4px; }
 .profile-species {
   display: inline-block;
   background: var(--teal); color: #fff;
-  padding: 5px 14px; border-radius: 16px;
+  padding: 5px 16px; border-radius: 16px;
   font-size: 0.78rem; font-weight: 800;
-  text-transform: uppercase; letter-spacing: 0.1em;
-  margin-bottom: 18px;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin-bottom: 16px;
 }
-.profile-content h1 {
-  color: var(--teal); font-size: clamp(2.4rem, 5vw, 3.6rem);
+.animal-h1 {
+  color: var(--teal); font-size: clamp(2.6rem, 5.5vw, 4rem);
   margin-bottom: 6px; font-weight: 900;
 }
-.profile-meta { color: var(--muted); margin-bottom: 26px; font-size: 0.95rem; }
-.profile-meta .hebrew { color: var(--navy); font-weight: 600; }
-.profile-bio {
-  font-size: 1.08rem; line-height: 1.75; color: var(--text);
-  margin-bottom: 32px;
+.animal-hebrew-note { color: var(--muted); font-size: 0.98rem; margin-bottom: 22px; }
+.animal-hebrew-note .hebrew { color: var(--navy); font-weight: 700; }
+
+/* Package pill buttons (top + bottom of animal page) */
+.pkg-pills {
+  display: flex; justify-content: center; gap: 12px;
+  flex-wrap: wrap; margin: 22px auto 0; max-width: 820px;
 }
-.profile-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn {
+.pkg-pill {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 30px; border-radius: 30px;
-  font-weight: 800; font-size: 1rem; transition: all .25s;
-  cursor: pointer; border: 2px solid transparent;
+  padding: 12px 22px; min-height: 46px;
+  border-radius: 30px;
+  background: var(--teal); color: #fff !important;
+  font-weight: 800; font-size: 0.98rem;
+  transition: all .25s;
+  border: 2px solid var(--teal);
+  box-shadow: 0 3px 10px rgba(6, 162, 207, 0.25);
 }
-.btn-primary { background: var(--teal); color: #fff !important; }
-.btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
-.btn-ghost { background: transparent; color: var(--teal) !important; border-color: var(--teal); }
-.btn-ghost:hover { background: var(--teal); color: #fff !important; }
-@media (max-width: 900px) {
-  .profile { grid-template-columns: 1fr; padding: 30px 20px; }
-  .profile-photo { position: static; aspect-ratio: 4/3; }
+.pkg-pill:hover {
+  background: var(--teal-dark); border-color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(6, 162, 207, 0.35);
+  color: #fff !important;
+}
+.pkg-pill-vip {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+  border-color: var(--orange);
+  box-shadow: 0 3px 10px rgba(245, 166, 35, 0.35);
+}
+.pkg-pill-vip:hover {
+  background: var(--orange-dark); border-color: var(--orange-dark);
+  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.5);
+}
+.pkg-pill-premium {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+  border-color: var(--teal);
+}
+.pill-icon { color: #FFD700; font-size: 1.15rem; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+.pill-label { font-weight: 800; }
+.pill-price {
+  padding: 3px 10px; background: rgba(255,255,255,0.25);
+  border-radius: 12px; font-size: 0.85rem; font-weight: 800;
+}
+
+/* Gallery */
+.animal-gallery { padding: 30px 24px 20px; background: #fff; }
+.gallery-wrap {
+  max-width: 720px; margin: 0 auto;
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 12px 34px rgba(4, 81, 132, 0.15);
+  aspect-ratio: 4/3; background: var(--teal-light);
+}
+.gallery-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Story */
+.animal-story { padding: 50px 24px 40px; background: #fff; }
+.animal-story .section-title { margin-bottom: 28px; text-align: center; }
+.animal-story .section-title span { color: var(--teal); }
+.bio-body { font-size: 1.08rem; line-height: 1.8; color: var(--text); }
+.bio-body p { margin: 0 0 1.1em; }
+.bio-body p:first-child::first-letter {
+  font-size: 3rem; font-weight: 900; color: var(--teal);
+  float: left; line-height: 1; padding: 4px 10px 0 0;
+}
+
+/* Choose your package */
+.animal-choose {
+  background: #FAFCFE; padding: 50px 24px 60px;
+  text-align: center;
+}
+.animal-choose .section-title { margin-bottom: 22px; }
+.animal-choose .section-title span { color: var(--teal); }
+.back-btn-wrap { margin-top: 34px; }
+.back-pill {
+  display: inline-block; padding: 12px 30px;
+  border-radius: 30px; border: 2px solid var(--teal);
+  color: var(--teal) !important; background: #fff;
+  font-weight: 800; font-size: 0.98rem;
+  transition: all .25s;
+}
+.back-pill:hover { background: var(--teal); color: #fff !important; }
+
+@media (max-width: 700px) {
+  .pkg-pill { padding: 10px 16px; font-size: 0.9rem; }
+  .pill-price { font-size: 0.8rem; padding: 2px 8px; }
 }
 
 .related { background: #FAFCFE; padding: 60px 0; }
@@ -640,6 +688,25 @@ def render_home():
 </body>
 </html>"""
 
+def render_package_pills(prefix_class=""):
+    """Render the 4 adoption package pill buttons — used at top and bottom of animal pages."""
+    pills = []
+    icons = {"vip": "♔", "premium": "♔", "extended": "", "basic": ""}
+    order = ["vip", "premium", "extended", "basic"]
+    pkg_by_key = {p["key"]: p for p in PAGE["packages"]}
+    for key in order:
+        p = pkg_by_key.get(key)
+        if not p:
+            continue
+        icon = icons.get(key, "")
+        icon_html = f'<span class="pill-icon">{icon}</span>' if icon else ""
+        pills.append(
+            f'<a class="pkg-pill pkg-pill-{key}" href="{p["url"]}" target="_blank" rel="noopener">'
+            f'{icon_html}<span class="pill-label">{p["name"].replace(" Package","")}</span>'
+            f'<span class="pill-price">{p["price"]}</span></a>'
+        )
+    return f'<div class="pkg-pills{" " + prefix_class if prefix_class else ""}">' + "".join(pills) + "</div>"
+
 def render_animal_page(a, idx):
     others = [x for x in animals if x["slug"] != a["slug"]]
     related = [others[(idx + i) % len(others)] for i in range(3)]
@@ -664,29 +731,55 @@ def render_animal_page(a, idx):
     )
     nav = render_nav(active_href="index.html", prefix="../")
     footer = render_footer()
+    top_pills = render_package_pills()
+    bottom_pills = render_package_pills()
+
+    # Split bio into paragraphs (on double newlines or long spans)
+    bio_paragraphs = [p.strip() for p in a["bio"].split("\n\n") if p.strip()]
+    if len(bio_paragraphs) <= 1:
+        # Try splitting on sentence groups every ~3 sentences
+        sents = [s.strip() for s in a["bio"].replace("! ", "!|").replace(". ", ".|").replace("? ", "?|").split("|") if s.strip()]
+        if len(sents) >= 6:
+            group_size = max(2, len(sents) // 3)
+            bio_paragraphs = [" ".join(sents[i:i+group_size]) for i in range(0, len(sents), group_size)]
+        else:
+            bio_paragraphs = [a["bio"]]
+    bio_html = "".join(f"<p>{p}</p>" for p in bio_paragraphs)
 
     return f"""{head}
 <body>
 {nav}
 
-<section class="animal-page-hero">
+<section class="animal-hero">
   <div class="container">
-    <a href="../index.html#residents" class="back-link">{PAGE['back_to_all']}</a>
+    <span class="profile-species">{a['species']}</span>
+    <h1 class="animal-h1">{a['name']}</h1>
+    <p class="animal-hebrew-note">Also known as <span class="hebrew">{a['hebrew_name']}</span></p>
+    {top_pills}
   </div>
 </section>
 
-<section class="profile">
-  <div class="profile-photo reveal">
-    <img src="../{a['photo']}" alt="{a['name']}, {a['species']}">
+<section class="animal-gallery">
+  <div class="container">
+    <div class="gallery-wrap reveal">
+      <img src="../{a['photo']}" alt="{a['name']}, {a['species']}">
+    </div>
   </div>
-  <div class="profile-content">
-    <span class="profile-species">{a['species']}</span>
-    <h1>{a['name']}</h1>
-    <p class="profile-meta">Also known as <span class="hebrew">{a['hebrew_name']}</span></p>
-    <p class="profile-bio">{a['bio']}</p>
-    <div class="profile-actions">
-      <a href="../index.html#packages" class="btn btn-primary">Sponsor {a['name']}</a>
-      <a href="../index.html#residents" class="btn btn-ghost">See all residents</a>
+</section>
+
+<section class="animal-story">
+  <div class="container narrow">
+    <h2 class="section-title">The Story of <span>{a['name']}</span></h2>
+    <div class="bio-body">{bio_html}</div>
+  </div>
+</section>
+
+<section class="animal-choose">
+  <div class="container narrow">
+    <h2 class="section-title">Choose your package to adopt <span>{a['name']}</span></h2>
+    {bottom_pills}
+    <div class="back-btn-wrap">
+      <a href="../index.html#residents" class="back-pill">← Back to all residents</a>
     </div>
   </div>
 </section>
