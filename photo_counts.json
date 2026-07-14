@@ -1,0 +1,324 @@
+{
+  "אביב": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_9e76e1183f614f6281c50deaaf437386",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "32bdae_9984a4ea534541638deb72c786b4dfd4",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "אלפא": [
+    4,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_7308c537e5f0487c9a84627dc39de934",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "בייב ובובה": [
+    5,
+    [
+      "32bdae_e8694454909a483f80a19916130e373a",
+      "32bdae_fdb83d2697554b7e9e5537569d4e9bf7",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "הרצל": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_e5f9cff224874f8fb8ac5b8cf8e3f9c7",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "f78efc_ce54a0ffac93409ba39bc525eb1f94b7",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "חתולי החווה": [
+    5,
+    [
+      "32bdae_0fc69a4c95294b959ed5c92da6a57520",
+      "32bdae_f1fd32bf035d471abe3a5c3b2b9058db",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "יעל": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_f5b872388ed540f5a91562bc29e83e7a",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "32bdae_634a0eddc1c4442e842993edcb6311cf",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "ליאור": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "d0bc67_53942791e4f84d258ecf4c9159f75c3c",
+      "d0bc67_7b42eb1f172349b2b7154c4bea2bd829",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "מיני": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "d0bc67_f64378b133964515abdbb031fe7ad972",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "d0bc67_0c29fb1eeb42406ba7b49b25fb48e9d5",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "סטיבן": [
+    4,
+    [
+      "f78efc_441d905495b74defadb16e7db7340d6c",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "פני": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_c2cf71e7c27d43d899eefa643216499c",
+      "32bdae_324ee92cdb26459b8bc8823dd2a0b3bd",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "שחר": [
+    4,
+    [
+      "d0bc67_63cec1a34457447cb18a7b71574b14db",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "אלי": [
+    4,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_7edd292d29b34c309100535a26dc5033",
+      "32bdae_1065a384b0d8411789911b9d7bf44433",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84"
+    ]
+  ],
+  "אנג'לה": [
+    5,
+    [
+      "32bdae_46bdc421697a4b649bcbd85144821861",
+      "32bdae_d8f895e0886849d481aec493a4c5fd4a",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "דולי": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_5ce103adf56f4f61b49ba87fdc068fdb",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "32bdae_08adab16779845f8811ee364d655ea70",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "ונוס": [
+    4,
+    [
+      "f78efc_649532db63064a41a0cd10cf9df4ac28",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "יוסי": [
+    5,
+    [
+      "d0bc67_61e4d463cc5d4c0fa14499acd606303f",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "d0bc67_7b34951b3e8a4c35b904e0a51181a69a",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "לואי": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "32bdae_ada9a92a90ef4a0592c6f775099a5be8",
+      "32bdae_af82524b4f634ce7937bc974cefdca55",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "מאפין": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_527f28ad036248c4b23071d1a6f6bf80",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033",
+      "f78efc_5b5765be8c2c4e49ab410defd30a47ea"
+    ]
+  ],
+  "נילה": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_f96238b8ae114cdca237ef8750a0df3f",
+      "32bdae_c8fb35d293de4930a0d1da840c8a9abb",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "עפרי": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "d0bc67_7b42eb1f172349b2b7154c4bea2bd829",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "d0bc67_27e72f43ab9e469fa8d5ecc9debfd8f3",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "צביקה": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "d0bc67_9cb7a65f430947298fc17022445260c6",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "d0bc67_1ee70c9ab8e14f77aae7af5dc19249b7",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "שרה": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_94f75e1383dd42d4a582309b56a20b1e",
+      "f78efc_d98580f2732849a2b1a121eabad7bf87",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "אלימן": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "2d3ea6_3545545c2300426d91b653a80a45bae6",
+      "11062b_7edd292d29b34c309100535a26dc5033",
+      "f78efc_df3024270e5845c48bd5c95f24409d0a"
+    ]
+  ],
+  "אפי וליהי": [
+    4,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_d4be6ffdca6344008ab01deeb8aeda81",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "דידי": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "f78efc_29435a04abfd4ad095260c29648790e3",
+      "f78efc_bf93b842366a40299b93af72ef1bfcd6",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "חן": [
+    5,
+    [
+      "f78efc_8de6de60d42e4c8daf8185c148bd916b",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_e06edfb2857644bba078bc35b53244a4",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "יוקו, מיקי ודנדי": [
+    5,
+    [
+      "32bdae_faa20bdc4a4a46369acfb1c85b685182",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_e7ea31d1a15e452193a7b4bd66e867aa",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "לוקמן (לוקי)": [
+    4,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "32bdae_1545ca5c34064d5a91edb4e41d02ba54",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "מומו": [
+    5,
+    [
+      "32bdae_08bb0056e8c7488b96738a6294d668e9",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_ca66495b01dc4cefae89a1a7d0f2d972",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "נס": [
+    5,
+    [
+      "f78efc_7a5da3fe6b114d67b5dbf4a01d4c9433",
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_61af119c55a54c6da03c21fa303f784d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "פיקה": [
+    4,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "f78efc_144c444c0a86468582941a26adf3b3cf",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "שהם": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "32bdae_332d7a32e8384eb794eef881eb3f877c",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "32bdae_2d3e30f6768a4f81be5cbbe56a3d12cb",
+      "11062b_7edd292d29b34c309100535a26dc5033"
+    ]
+  ],
+  "תמי": [
+    5,
+    [
+      "53d894_7ae3d583a6f54ced9cab5edda7086a0d",
+      "11062b_dc9641e157b2422b9f6a74d9b2b07f84",
+      "11062b_7edd292d29b34c309100535a26dc5033",
+      "d0bc67_88198d8d3e9042be8eca2c9970787e92",
+      "d0bc67_615b6adbb4414834a475c4592b275cbb"
+    ]
+  ]
+}

@@ -16,6 +16,12 @@ def slugify(name_en: str) -> str:
     s = re.sub(r"[\s_&]+", "-", s).strip("-")
     return s
 
+# Load gallery map (all photos per animal)
+try:
+    GALLERY_MAP = json.loads((ROOT / "gallery_map.json").read_text())
+except FileNotFoundError:
+    GALLERY_MAP = {}
+
 # Build animal list with local images
 animals = []
 for a in SRC["animals"]:
@@ -23,14 +29,15 @@ for a in SRC["animals"]:
     tr = ANIMALS_T[heb]
     slug = slugify(tr["name"])
     ext = ".png" if ".png" in a["photo_url"] else ".jpg"
+    gallery_files = GALLERY_MAP.get(slug) or [f"{slug}{ext}"]
     animals.append({
         "hebrew_name": heb,
         "name": tr["name"],
         "species": SPECIES.get(a["species"], a["species"]),
         "tagline": tr["tagline"],
         "bio": tr["bio"],
-        "photo": f"images/{slug}{ext}",
-        "photo_from_animal": f"../images/{slug}{ext}",
+        "photo": f"images/{gallery_files[0]}",
+        "gallery": [f"images/{f}" for f in gallery_files],
         "slug": slug,
     })
 
@@ -286,15 +293,15 @@ section { padding: 70px 0; }
 .pkg-vip-bonuses img { width: 68px; height: 68px; object-fit: contain; }
 @media (max-width: 780px) { .packages-grid { grid-template-columns: 1fr; } }
 
-/* ---------- Residents grid ---------- */
+/* ---------- Residents grid (cards ~25% larger) ---------- */
 .residents { background: #fff; }
 .residents-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
-  max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px;
+  max-width: 1400px; margin: 0 auto;
 }
 .animal-card {
   background: #fff;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   transition: transform .3s, box-shadow .3s;
   color: inherit;
@@ -305,7 +312,7 @@ section { padding: 70px 0; }
   box-shadow: var(--card-shadow-hover);
   color: inherit;
 }
-.animal-photo { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #f0f4f8; }
+.animal-photo { position: relative; aspect-ratio: 5 / 4; overflow: hidden; background: #f0f4f8; }
 .animal-photo img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform .6s ease;
@@ -314,25 +321,25 @@ section { padding: 70px 0; }
 .animal-photo-overlay {
   position: absolute; left: 0; right: 0; bottom: 0;
   background: linear-gradient(to top, rgba(4,81,132,0.85), rgba(4,81,132,0));
-  padding: 40px 16px 14px; text-align: center;
+  padding: 46px 16px 18px; text-align: center;
 }
 .animal-photo-overlay span {
-  color: #fff; font-size: 0.95rem; font-weight: 700;
+  color: #fff; font-size: 1.05rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.08em;
 }
-.animal-body { padding: 18px 22px 22px; }
+.animal-body { padding: 22px 26px 26px; }
 .animal-name {
-  color: var(--teal); font-size: 1.5rem; font-weight: 900;
-  margin: 0 0 8px; line-height: 1.15;
+  color: var(--teal); font-size: 1.85rem; font-weight: 900;
+  margin: 0 0 10px; line-height: 1.15;
 }
 .animal-tagline {
-  color: var(--text-soft); font-size: 0.94rem; line-height: 1.5;
+  color: var(--text-soft); font-size: 1.02rem; line-height: 1.55;
   margin: 0;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
   overflow: hidden;
 }
-@media (max-width: 900px) { .residents-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 580px) { .residents-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .residents-grid { grid-template-columns: repeat(2, 1fr); max-width: 900px; } }
+@media (max-width: 640px) { .residents-grid { grid-template-columns: 1fr; max-width: 500px; } }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -438,15 +445,101 @@ section { padding: 70px 0; }
   border-radius: 12px; font-size: 0.85rem; font-weight: 800;
 }
 
-/* Gallery */
+/* Single hero photo on animal page */
 .animal-gallery { padding: 30px 24px 20px; background: #fff; }
 .gallery-wrap {
-  max-width: 720px; margin: 0 auto;
+  max-width: 780px; margin: 0 auto;
   border-radius: 16px; overflow: hidden;
   box-shadow: 0 12px 34px rgba(4, 81, 132, 0.15);
   aspect-ratio: 4/3; background: var(--teal-light);
 }
-.gallery-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Adoption form page */
+.form-page-body { background: #f6fbfd; min-height: 100vh; }
+.form-hero { padding: 44px 24px 20px; text-align: center; }
+.form-hero .badge {
+  display: inline-block; padding: 6px 16px; border-radius: 999px;
+  background: var(--teal); color: #fff; font-weight: 800;
+  font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.form-hero h1 {
+  font-size: 2.4rem; font-weight: 900; color: var(--navy);
+  margin: 14px 0 8px;
+}
+.form-hero .form-sub { color: var(--text-soft); margin: 0; font-size: 1.05rem; }
+.form-wrap {
+  max-width: 720px; margin: 20px auto 60px;
+  background: #fff; border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(4, 81, 132, 0.12);
+  padding: 36px 40px;
+}
+.form-summary {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; padding: 16px 20px;
+  background: linear-gradient(135deg, var(--teal-light), #fff);
+  border-radius: 12px; margin-bottom: 26px;
+  border-left: 4px solid var(--teal);
+}
+.form-summary .name { font-weight: 800; color: var(--navy); font-size: 1.05rem; }
+.form-summary .price {
+  font-weight: 900; color: var(--teal); font-size: 1.45rem;
+  background: #fff; padding: 6px 14px; border-radius: 999px;
+}
+.form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px;
+}
+.form-field { display: flex; flex-direction: column; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label {
+  font-weight: 700; color: var(--navy);
+  font-size: 0.92rem; margin-bottom: 6px;
+}
+.form-field label .req { color: #d0332e; }
+.form-field input, .form-field select, .form-field textarea {
+  padding: 12px 14px; border: 1px solid #d5e2eb; border-radius: 10px;
+  font: inherit; font-size: 1rem; color: var(--navy);
+  background: #fff; transition: border-color .2s, box-shadow .2s;
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  outline: 0; border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(6, 162, 207, 0.18);
+}
+.form-field textarea { min-height: 96px; resize: vertical; }
+.form-checkbox {
+  grid-column: 1 / -1;
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 12px; background: #f6fbfd; border-radius: 10px;
+  font-size: 0.92rem; color: var(--text-soft);
+}
+.form-checkbox input { margin-top: 3px; }
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex; justify-content: center; margin-top: 12px;
+}
+.form-submit {
+  background: var(--teal); color: #fff;
+  padding: 15px 44px; border: 0; border-radius: 999px;
+  font-size: 1.05rem; font-weight: 800; cursor: pointer;
+  transition: background .2s, transform .2s;
+  box-shadow: 0 6px 20px rgba(6, 162, 207, 0.35);
+}
+.form-submit:hover { background: var(--teal-dark); transform: translateY(-2px); }
+.form-footnote {
+  grid-column: 1 / -1;
+  text-align: center; color: var(--text-soft);
+  font-size: 0.85rem; margin-top: 6px;
+}
+.form-back {
+  display: inline-block; margin-top: 18px; color: var(--teal);
+  text-decoration: none; font-weight: 700;
+}
+.form-back:hover { text-decoration: underline; }
+@media (max-width: 620px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .form-wrap { padding: 24px 20px; }
+  .form-hero h1 { font-size: 1.8rem; }
+}
 
 /* Story */
 .animal-story { padding: 50px 24px 40px; background: #fff; }
@@ -688,8 +781,8 @@ def render_home():
 </body>
 </html>"""
 
-def render_package_pills(prefix_class=""):
-    """Render the 4 adoption package pill buttons — used at top and bottom of animal pages."""
+def render_package_pills(animal_slug=None, prefix="", prefix_class=""):
+    """Render the 4 adoption package pill buttons — link to the local English form page."""
     pills = []
     icons = {"vip": "♔", "premium": "♔", "extended": "", "basic": ""}
     order = ["vip", "premium", "extended", "basic"]
@@ -700,8 +793,12 @@ def render_package_pills(prefix_class=""):
             continue
         icon = icons.get(key, "")
         icon_html = f'<span class="pill-icon">{icon}</span>' if icon else ""
+        if animal_slug:
+            href = f"{prefix}adopt/{animal_slug}-{key}.html"
+        else:
+            href = f"{prefix}adopt/{key}.html"
         pills.append(
-            f'<a class="pkg-pill pkg-pill-{key}" href="{p["url"]}" target="_blank" rel="noopener">'
+            f'<a class="pkg-pill pkg-pill-{key}" href="{href}">'
             f'{icon_html}<span class="pill-label">{p["name"].replace(" Package","")}</span>'
             f'<span class="pill-price">{p["price"]}</span></a>'
         )
@@ -731,8 +828,14 @@ def render_animal_page(a, idx):
     )
     nav = render_nav(active_href="index.html", prefix="../")
     footer = render_footer()
-    top_pills = render_package_pills()
-    bottom_pills = render_package_pills()
+    top_pills = render_package_pills(animal_slug=a["slug"], prefix="../")
+    bottom_pills = render_package_pills(animal_slug=a["slug"], prefix="../")
+
+    # Single hero photo (matches Hebrew source)
+    hero_photo = a["gallery"][0] if a.get("gallery") else a["photo"]
+    self_gallery = f"""<div class="gallery-wrap reveal">
+      <img src="../{hero_photo}" alt="{a['name']}, {a['species']}">
+    </div>"""
 
     # Split bio into paragraphs (on double newlines or long spans)
     bio_paragraphs = [p.strip() for p in a["bio"].split("\n\n") if p.strip()]
@@ -761,9 +864,7 @@ def render_animal_page(a, idx):
 
 <section class="animal-gallery">
   <div class="container">
-    <div class="gallery-wrap reveal">
-      <img src="../{a['photo']}" alt="{a['name']}, {a['species']}">
-    </div>
+    {self_gallery}
   </div>
 </section>
 
@@ -800,24 +901,161 @@ def render_animal_page(a, idx):
 
 REVEAL_JS = """document.addEventListener('DOMContentLoaded', () => {
   const els = document.querySelectorAll('.reveal');
-  // If IntersectionObserver missing or user prefers reduced motion, just show all
   const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!('IntersectionObserver' in window) || reduced) {
     els.forEach(el => el.classList.add('visible'));
-    return;
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.01, rootMargin: '0px 0px 200px 0px' });
+    els.forEach(el => io.observe(el));
+    setTimeout(() => document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible')), 3000);
   }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+
+  // Photo carousel on animal pages
+  document.querySelectorAll('.gallery-wrap').forEach(wrap => {
+    const track = wrap.querySelector('.gallery-track');
+    const slides = wrap.querySelectorAll('.gallery-slide');
+    const dots = wrap.querySelectorAll('.gallery-dot');
+    const prev = wrap.querySelector('.gallery-prev');
+    const next = wrap.querySelector('.gallery-next');
+    if (!track || slides.length < 2) {
+      if (prev) prev.style.display = 'none';
+      if (next) next.style.display = 'none';
+      const dotsWrap = wrap.querySelector('.gallery-dots');
+      if (dotsWrap) dotsWrap.style.display = 'none';
+      return;
+    }
+    let idx = 0;
+    const total = slides.length;
+    const goTo = (i) => {
+      idx = (i + total) % total;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, di) => d.classList.toggle('active', di === idx));
+    };
+    prev && prev.addEventListener('click', () => goTo(idx - 1));
+    next && next.addEventListener('click', () => goTo(idx + 1));
+    dots.forEach((d, di) => d.addEventListener('click', () => goTo(di)));
+    // Keyboard support
+    wrap.setAttribute('tabindex', '0');
+    wrap.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goTo(idx - 1);
+      if (e.key === 'ArrowRight') goTo(idx + 1);
     });
-  }, { threshold: 0.01, rootMargin: '0px 0px 200px 0px' });
-  els.forEach(el => io.observe(el));
-  // Safety net: after 3s, force-show anything still hidden
-  setTimeout(() => document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible')), 3000);
+    // Touch swipe
+    let startX = 0;
+    track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) goTo(idx + (dx < 0 ? 1 : -1));
+    });
+  });
 });
 """
 
 # Write files
+def render_form_page(a, pkg_key):
+    pkg = next((p for p in PAGE["packages"] if p["key"] == pkg_key), None)
+    if not pkg:
+        return ""
+    head = HEAD.format(
+        title=f"Adopt {a['name']} · {pkg['name']}",
+        desc=f"Complete your virtual adoption of {a['name']} with the {pkg['name']}.",
+        css_path="../style.css",
+        prefix="../",
+    )
+    nav = render_nav(active_href="index.html", prefix="../")
+    footer = render_footer()
+    hero_photo = a["gallery"][0] if a.get("gallery") else a["photo"]
+    includes_html = "".join(f"<li>{inc}</li>" for inc in pkg.get("includes", []))
+    return f"""{head}
+<body class="form-page-body">
+{nav}
+
+<section class="form-hero">
+  <div class="container narrow">
+    <span class="badge">{pkg['name']}</span>
+    <h1>Adopt {a['name']}</h1>
+    <p class="form-sub">Complete the details below to virtually adopt {a['name']} the {a['species'].lower()}.</p>
+  </div>
+</section>
+
+<section>
+  <div class="form-wrap">
+    <div class="form-summary">
+      <div>
+        <div class="name">{a['name']} · {pkg['name']}</div>
+        <div style="color:var(--text-soft);font-size:0.88rem;margin-top:4px;">Recurring monthly support</div>
+      </div>
+      <div class="price">{pkg['price']} / mo</div>
+    </div>
+
+    {f'<ul style="margin:0 0 22px;padding-left:20px;color:var(--text-soft);font-size:0.95rem;line-height:1.7;">{includes_html}</ul>' if includes_html else ''}
+
+    <form class="form-grid" action="{pkg['url']}" method="get" target="_blank" rel="noopener">
+      <div class="form-field">
+        <label for="first_name">First name <span class="req">*</span></label>
+        <input id="first_name" name="first_name" type="text" required autocomplete="given-name">
+      </div>
+      <div class="form-field">
+        <label for="last_name">Last name <span class="req">*</span></label>
+        <input id="last_name" name="last_name" type="text" required autocomplete="family-name">
+      </div>
+      <div class="form-field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="form-field">
+        <label for="phone">Phone <span class="req">*</span></label>
+        <input id="phone" name="phone" type="tel" required autocomplete="tel">
+      </div>
+      <div class="form-field">
+        <label for="country">Country</label>
+        <input id="country" name="country" type="text" autocomplete="country-name" value="Israel">
+      </div>
+      <div class="form-field">
+        <label for="city">City</label>
+        <input id="city" name="city" type="text" autocomplete="address-level2">
+      </div>
+      <div class="form-field full">
+        <label for="address">Address (for certificate delivery)</label>
+        <input id="address" name="address" type="text" autocomplete="street-address">
+      </div>
+      <div class="form-field full">
+        <label for="dedicate">Dedicate this adoption to someone (optional)</label>
+        <input id="dedicate" name="dedicate" type="text" placeholder="e.g. In honor of … / A gift for …">
+      </div>
+      <div class="form-field full">
+        <label for="message">Message to the farm (optional)</label>
+        <textarea id="message" name="message" placeholder="Anything you’d like the team to know"></textarea>
+      </div>
+      <label class="form-checkbox">
+        <input type="checkbox" name="updates" checked>
+        <span>Send me updates and photos of {a['name']} from Keren Or Farm.</span>
+      </label>
+      <label class="form-checkbox">
+        <input type="checkbox" name="terms" required>
+        <span>I confirm I want to start a recurring monthly donation of {pkg['price']} and agree to the terms.</span>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="form-submit">Continue to secure payment →</button>
+      </div>
+      <p class="form-footnote">You’ll be taken to our secure payment processor (Cardcom) to complete the {pkg['price']} monthly donation. All donations are tax-deductible under section 46 of the Israeli tax code.</p>
+    </form>
+
+    <div style="text-align:center;">
+      <a class="form-back" href="../animals/{a['slug']}.html">← Back to {a['name']}’s page</a>
+    </div>
+  </div>
+</section>
+
+{footer}
+<script src="../reveal.js"></script>
+</body>
+</html>"""
+
 (ROOT / "style.css").write_text(CSS, encoding="utf-8")
 (ROOT / "reveal.js").write_text(REVEAL_JS, encoding="utf-8")
 (ROOT / "index.html").write_text(render_home(), encoding="utf-8")
@@ -828,5 +1066,15 @@ for f in anim_dir.glob("*.html"):
     f.unlink()
 for i, a in enumerate(animals):
     (anim_dir / f"{a['slug']}.html").write_text(render_animal_page(a, i), encoding="utf-8")
+
+# Adoption form pages (one per animal × package)
+form_dir = ROOT / "adopt"
+form_dir.mkdir(exist_ok=True)
+form_count = 0
+for a in animals:
+    for key in ["basic", "extended", "premium", "vip"]:
+        (form_dir / f"{a['slug']}-{key}.html").write_text(render_form_page(a, key), encoding="utf-8")
+        form_count += 1
+print(f"Built {form_count} adoption forms")
 
 print(f"Built {len(animals)} animal pages + index.html")
